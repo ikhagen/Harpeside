@@ -13,7 +13,7 @@ def send_email(subject, sender, recipients, text_body, html_body):
 def contact_email(sender, message):
     send_email("Message from harpeside",
                sender,
-               'idakhagen@gmail.com',
+               ['idakhagen@gmail.com'],
                render_template("contact_request.txt",
                                sender=sender, message=message),
                render_template("contact_request.html",
