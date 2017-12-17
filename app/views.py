@@ -9,6 +9,11 @@ def index():
     return render_template('home.html')
 
 
+@app.route('/portfolio')
+def portfolio():
+    return render_template('portfolio.html')
+
+
 @app.route('/contact', methods=['GET', 'POST'])
 @app.route('/kontakt', methods=['GET', 'POST'])
 def contact():
