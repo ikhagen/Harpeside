@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}Kontakt{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important { color: #336699; }
+
+</style>
+{% endblock %}
+{% block content %}
+<h1>Kontakt meg</h1>
+<form action="" method="post" name="contact">
+    {{ form.hidden_tag() }}
+    <p>
+        Epost: {{ form.email(size=80) }}
+        {% for error in form.email.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+    </p>
+    <p>
+        Melding: {{ form.message(size=80) }}
+    </p>
+    <p>
+        <input type="submit" value="send">
+    </p>
+</form>
+<a href="/">Heim</a>
+{% endblock %}
