@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
 </head>
 <body>
-<div id="home-container" class="container">
+<div id="header-div" class="container">
     <div id="header"></div>
 
     <div id="content">
         <div class="logo">
             <img src="../static/images/Annettelogo.png"/>
         </div>
-        <hr>
+ 
         <div id="navigation">
             <div class="nav-home">
                 <a href="/">Heim</a>
@@ -33,12 +33,14 @@
             </div>
         </div>
     </div>
-
     <!-- <div id="footer">
          {% block footer %}
          &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
          {% endblock %}
      </div> -->
+</div>
+<div id="content-div">
+    ENding here content soneting
 </div>
 <!-- scripts -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
