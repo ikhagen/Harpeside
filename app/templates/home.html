@@ -1,13 +1,50 @@
-{% extends "layout.html" %}
-{% block title %}Index{% endblock %}
-{% block head %}
-  {{ super() }}
-  <style type="text/css">
-    .important { color: #336699; }
-  </style>
-{% endblock %}
-{% block content %}
-  <h1>Index</h1>
-  <p class="important">
-    Welcome on my awesome homepage.
-{% endblock %}
+<!doctype html>
+<html>
+<head>
+    {% block head %}
+    <title>{% block title %}{% endblock %} - Harpeside</title>
+    {% endblock %}
+    <!-- styles -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body>
+<div id="home-container" class="container">
+    <div id="header"></div>
+
+    <div id="content">
+        <div class="logo">
+            <img src="../static/images/Annettelogo.png"/>
+        </div>
+        <hr>
+        <div id="navigation">
+            <div class="nav-home">
+                <a href="/">Heim</a>
+            </div>
+            <div class="nav-about">
+                <a href="/about">Om meg</a>
+            </div>
+            <div class="nav-port">
+                <a href="/portfolio">Portefølge</a>
+            </div>
+            <div class="nav-contact">
+                <a href="/contact">Kontakt meg</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="footer">
+         {% block footer %}
+         &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+         {% endblock %}
+     </div> -->
+</div>
+<!-- scripts -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+</body>
+</html>

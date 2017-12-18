@@ -12,30 +12,28 @@
 </head>
 <body>
 
-<a href="/">Heim</a>
-<a href="/portfolio">Portefølge</a>
-<a href="/contact">Kontakt meg</a>
+<div id="home-container" class="container">
+    <div id="header">
+        <div class="nav">
+            <a href="/">Heim</a>
+            <a href="/about">Om meg</a>
+            <a href="/portfolio">Portefølge</a>
+            <a href="/contact">Kontakt meg</a>
+        </div>
+    </div>
 
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-<ul>
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
-{% endwith %}
-
-<div id="content">{% block content %}{% endblock %}</div>
-<div id="footer">
-    {% block footer %}
-    &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
-    {% endblock %}
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+       <!-- &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>. -->
+        {% endblock %}
+    </div>
 </div>
 <!-- scripts -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
 </body>
 </html>

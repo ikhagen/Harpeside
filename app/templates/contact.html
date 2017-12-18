@@ -8,15 +8,29 @@
 </style>
 {% endblock %}
 {% block content %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
 <h1>Kontakt meg</h1>
+<p>Send meg ei melding her, så skal eg svare deg så fort eg kan.</p>
 <form action="" method="post" name="contact">
     {{ form.hidden_tag() }}
+    <p>Navn: {{ form.name }}</p>
     <p>
         Epost: {{ form.email(size=80) }}
         {% for error in form.email.errors %}
             <span style="color: red;">[{{ error }}]</span>
           {% endfor %}<br>
     </p>
+    <p>Telefon: {{ form.phone }}</p>
     <p>
         Melding: {{ form.message(size=80) }}
     </p>
