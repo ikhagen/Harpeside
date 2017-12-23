@@ -25,3 +25,22 @@ background: pink;
 #content .logo{
 text-align: center;
 }
+
+p, h1 {
+font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #222222;
+}
+
+.about-content{
+display: inline-flex;
+padding: 60px;
+}
+
+.about-content .text{
+padding-left: 30px;
+}
+
+.about-content img{
+height: 600px;
+filter: grayscale(50%);
+}
