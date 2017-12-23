@@ -1,16 +1,27 @@
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, url_for
 from app import app
 from .emails import contact_email
 from .forms import ContactForm
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template('home.html')
+    form = ContactForm()
+
+    if form.validate_on_submit():
+        contact_email(form.email.data, form.message.data)
+        flash('Login requested for OpenID="%s", remember_me=%s' %
+              (form.email.data, str(form.message.data)))
+        return redirect(url_for('index', _anchor='content-div'))
+
+    return render_template('home.html',
+                           form=form)
+
 
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 @app.route('/portfolio')
 def portfolio():
