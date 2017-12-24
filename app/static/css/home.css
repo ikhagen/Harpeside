@@ -44,3 +44,25 @@ padding-left: 30px;
 height: 600px;
 filter: grayscale(50%);
 }
+
+#header{
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+#about-div{
+padding-top: 80px;
+height: 1000px;
+}
+
+#portfolio-div{
+padding-top: 80px;
+height:1000px;
+background-color: rgba(37, 37, 37, 0.5);
+}
+
+#contact-div{
+height: 966px;
+padding-top: 80px;
+}

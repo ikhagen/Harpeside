@@ -12,7 +12,7 @@ def index():
         contact_email(form.email.data, form.message.data)
         flash('Login requested for OpenID="%s", remember_me=%s' %
               (form.email.data, str(form.message.data)))
-        return redirect(url_for('index', _anchor='content-div'))
+        return redirect(url_for('index', _anchor='contact-div'))
 
     return render_template('home.html',
                            form=form)

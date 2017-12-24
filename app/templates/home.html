@@ -18,7 +18,7 @@
             <a href="{{ url_for('.index')}}">Heim</a>
             <a href="{{ url_for('.index', _anchor='about-div')}}">Om meg</a>
             <a href="{{ url_for('.index', _anchor='portfolio-div')}}">Portefølge</a>
-            <a href="{{ url_for('.index', _anchor='content-div')}}">Kontakt meg</a>
+            <a href="{{ url_for('.index', _anchor='contact-div')}}">Kontakt meg</a>
         </div>
     </div>
 
@@ -39,7 +39,7 @@
 <div id="portfolio-div">
     {% include 'portfolio.html' %}
 </div>
-<div id="content-div">
+<div id="contact-div">
     {% include 'contact.html' %}
 </div>
 <!-- scripts -->
