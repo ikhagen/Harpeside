@@ -26,7 +26,7 @@ background: pink;
 text-align: center;
 }
 
-p, h1 {
+p, h1, h4 {
 font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #222222;
 }
@@ -59,10 +59,37 @@ height: 1000px;
 #portfolio-div{
 padding-top: 80px;
 height:1000px;
-background-color: rgba(37, 37, 37, 0.5);
+background-color: #e6e4e0;
+padding: 60px;
 }
 
 #contact-div{
-height: 966px;
+height: 910px;
 padding-top: 80px;
+}
+
+#port-content div{
+display: inline-flex;
+}
+
+#port-content img{
+height: 250px;
+padding: 30px;
+}
+
+#port-content p{
+padding: 30px;
+}
+
+   #gift{
+display:block;
+position:absolute;
+float:right;
+bottom:100px;
+right:20px;
+cursor: pointer;
+}
+
+#gift img{
+width: 300px;
 }

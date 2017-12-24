@@ -42,6 +42,61 @@
 <div id="contact-div">
     {% include 'contact.html' %}
 </div>
+<div id="gift">
+    <a data-toggle="modal" data-target="#infoModal">
+        <img src="../static/images/gift.png">
+    </a>
+</div>
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                        class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="editModalLabel">Informasjon om julegåve</h4>
+            </div>
+            <div class="modal-body">
+                <div class="text">
+                    <p>
+                        Hei Annette!
+                    </p>
+                    <p>
+                        Julegåva di i år er ei harpeside.
+                    </p>
+                    <p>
+                        Denne sida er berre ein prototype, du skal få vere med å bestemme utforming og innhald sjølv.
+                    </p>
+                    <p>
+                        Eg har ikkje hatt så god tid til å jobbe med ho enno, det var meininga at ho skulle bli like fin
+                        som den her: <a href="http://themeforest.unitedthemes.com/wpversions/brooklyn/demo17/"
+                                        target="_blank">Brooklyn
+                        Barber</a>, men det vart det ikkje tid til. <br>
+                        Eg fant heller ikkje så mange harpebilete av deg, så eg fant eit bilete av ein fremmand person
+                        på nettet. Det burde jo ha vore bilete av deg på framsida.<br>
+                        Det heiter vel også "harpist", ikkje "harpespelar", men det kom eg på litt for seint, og då gadd
+                        eg ikkje å endre på det.
+                    </p>
+                    <p>
+                        Her er også ein e-post-funksjon. Foreløpig sender den epost frå mi eiga adresse, og den ser
+                        ikkje særleg fin ut. Det skal eg og fikse i den endelege versjonen.
+                    </p>
+                    <p>
+                        Eg tenkte og at vi skulle ha støtte for forskjellege språk, td. nynorsk, bokmål og engelsk.
+                    </p>
+                    <p>
+                        Eg har ikke funne ut kva det kostar å ha ei webside, men eg tenkte iallfall å dekke dei fleste
+                        utgiftene for det første året.
+                    </p>
+                    <p>
+                        God jul, <br>
+                        Helsing lisjesystrå di.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- scripts -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
