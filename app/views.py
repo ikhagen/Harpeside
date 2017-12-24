@@ -9,9 +9,8 @@ def index():
     form = ContactForm()
 
     if form.validate_on_submit():
-        contact_email(form.email.data, form.message.data)
-        flash('Login requested for OpenID="%s", remember_me=%s' %
-              (form.email.data, str(form.message.data)))
+        contact_email(form.name.data, form.email.data, form.phone.data, form.message.data)
+        flash('Meldinga er sendt')
         return redirect(url_for('index', _anchor='contact-div'))
 
     return render_template('home.html',

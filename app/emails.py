@@ -10,14 +10,14 @@ def send_email(subject, sender, recipients, text_body, html_body):
     mail.send(msg)
 
 
-def contact_email(sender, message):
-    send_email("Message from harpeside",
-               sender,
+def contact_email(name, email, phone, message):
+    send_email("Nokon har sendt deg ei melding fra harpeside",
+               email,
                ['idakhagen@gmail.com'],
                render_template("contact_request.txt",
-                               sender=sender, message=message),
+                               sender=email, name=name, phone=phone, message=message),
                render_template("contact_request.html",
-                               sender=sender, message=message))
+                               sender=email, name=name, phone=phone, message=message))
 
 
 

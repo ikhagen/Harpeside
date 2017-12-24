@@ -1,5 +1,8 @@
-{{ sender }} has sent you a message:
+{{ name }} has sent you a message:
 
 {{message }}
 
-Hilsen Harpeside
+{{phone}}
+{{mail}}
+
+Helsing Harpeside
